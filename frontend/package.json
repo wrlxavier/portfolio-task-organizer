@@ -1,0 +1,29 @@
+{
+  "name": "frontend_task_organizer",
+  "version": "1.0.0",
+  "description": "A simple task organization application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "lite-server --baseDir=app/dist",
+    "watch_ts": "tsc -w",
+    "watch_sass": "sass --watch app/src/styles/style.scss:app/dist/css/style.css",
+    "start": "concurrently \"npm run watch_ts\" \"npm run watch_sass\" \"npm run server\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wrlxavier/portfolio-task-organizer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wrlxavier/portfolio-task-organizer/issues"
+  },
+  "homepage": "https://github.com/wrlxavier/portfolio-task-organizer#readme",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "lite-server": "^2.6.1",
+    "sass": "^1.58.0",
+    "typescript": "^4.9.5"
+  }
+}
