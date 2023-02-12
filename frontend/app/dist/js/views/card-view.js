@@ -1,4 +1,3 @@
-import { View } from "./view.js";
-export class CardView extends View {
+export class CardView {
 }
 //# sourceMappingURL=card-view.js.map

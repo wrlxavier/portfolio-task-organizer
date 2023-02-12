@@ -12,7 +12,6 @@
 
 .main-section {
   width: 100vw;
-  background-color: red;
   overflow-x: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -23,7 +22,6 @@
 .main-section .row-of-cards {
   padding: 20px;
   height: calc(100vh - 100px);
-  background-color: green;
   width: fit-content;
   display: flex;
 }
@@ -38,7 +36,7 @@
 .card {
   min-height: 60px;
   width: 100%;
-  background-color: blue;
+  background-color: #424242;
   border-radius: 10px;
   margin-bottom: 10px;
 }

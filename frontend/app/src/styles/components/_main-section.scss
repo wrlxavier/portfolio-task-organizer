@@ -4,7 +4,7 @@
 .main-section {
 
     width: 100vw;
-    background-color: red;
+    //background-color: red;
     overflow-x: scroll;
 
     &::-webkit-scrollbar {
@@ -16,7 +16,7 @@
     .row-of-cards {
         padding: 20px;
         height: calc(100vh - 100px);
-        background-color: green;
+        //background-color: green;
         width: fit-content;
         display: flex;
     }
