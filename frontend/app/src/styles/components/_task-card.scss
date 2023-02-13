@@ -1,0 +1,109 @@
+@import '../abstract/variables';
+
+.task-card {
+
+    transition: ease-in-out 0.2s;
+    -webkit-transition: ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -o-transition: ease-in-out 0.2s;
+
+    &:hover {
+        background-color: rgba($color: #FFF, $alpha: 0.1);
+    }
+
+    padding: 10px 0;
+    display: flex;
+    min-height: 60px;
+    width: 100%;
+    background-color: transparent;
+    //border-bottom: 1px $color-background-1 solid;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+
+    .timedelta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        //background-color: red;
+        width: 80px;
+        
+        .timedelta-circle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: $color-green;
+            //border: 3px solid $color-green;
+            border-radius: 10px;
+            img {
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                margin: 0px;
+            }
+            .timedelta-value {
+                color: $color-full-white;
+                font-size: $font-size-1;
+                font-weight: $regular;
+            }
+        }
+
+    }
+
+    .task-title {
+        width: calc(100% - 100px);
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        h4 {
+            //background-color: red;
+            color: $color-light-gray;
+            font-weight: $regular;
+            font-size: $font-size-1;
+        }
+    }
+
+    .checkbox-div {
+        width: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        //background-color: red;
+        input[type=checkbox] {
+              /* Add if not using autoprefixer */
+            -webkit-appearance: none;
+            appearance: none;
+            /* For iOS < 15 to remove gradient background */
+            background-color: #fff;
+            /* Not removed via appearance */
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0;
+            width: 30px;
+            height: 30px;
+            background: $color-background-2;
+            border: $color-green solid 2px;
+            border-radius: 5px;
+
+            &:checked::before {
+                content: '✓';
+                font-size: $font-size-2;
+                font-weight: $bold;
+                color: $color-green;
+                //background-color: red;
+                //width: 30px;
+            }
+        }
+
+    }
+
+
+    
+}

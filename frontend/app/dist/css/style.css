@@ -1,44 +1,118 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  background: #222831;
+}
+
+body * {
+  font-family: "Poppins", sans-serif;
+}
+
 .header {
   height: 100px;
   width: 100vw;
-  background-color: #D9D9D9;
+  background-color: #393E46;
 }
 
-.main-section {
-  width: 100vw;
-  overflow-x: scroll;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-.main-section::-webkit-scrollbar {
-  display: none;
-}
-.main-section .row-of-cards {
-  padding: 20px;
-  height: calc(100vh - 100px);
-  width: fit-content;
-  display: flex;
-}
-
-.card-list {
-  width: 300px;
-  height: 500px;
-  background-color: #D9D9D9;
+.task-list {
+  width: 600px;
+  height: fit-content;
+  background-color: #393E46;
   margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  list-style: none;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
-.card {
+.task-card {
+  transition: ease-in-out 0.2s;
+  -webkit-transition: ease-in-out 0.2s;
+  -moz-transition: ease-in-out 0.2s;
+  -o-transition: ease-in-out 0.2s;
+  padding: 10px 0;
+  display: flex;
   min-height: 60px;
   width: 100%;
-  background-color: #424242;
-  border-radius: 10px;
+  background-color: transparent;
   margin-bottom: 10px;
+  border-radius: 10px;
+}
+.task-card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.task-card .timedelta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+}
+.task-card .timedelta .timedelta-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #00ADB5;
+  border-radius: 10px;
+}
+.task-card .timedelta .timedelta-circle img {
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0px;
+}
+.task-card .timedelta .timedelta-circle .timedelta-value {
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.task-card .task-title {
+  width: calc(100% - 100px);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.task-card .task-title h4 {
+  color: #e0e0e0;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.task-card .checkbox-div {
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.task-card .checkbox-div input[type=checkbox] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  background: #393E46;
+  border: #00ADB5 solid 2px;
+  border-radius: 5px;
+}
+.task-card .checkbox-div input[type=checkbox]:checked::before {
+  content: "✓";
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00ADB5;
 }
 
 /*# sourceMappingURL=style.css.map */
