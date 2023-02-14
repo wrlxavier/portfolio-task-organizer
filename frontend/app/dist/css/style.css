@@ -20,10 +20,10 @@ body * {
 }
 
 .task-list {
-  width: 600px;
+  width: 100%;
+  max-width: 512px;
   height: fit-content;
   background-color: #393E46;
-  margin: 20px;
   padding: 10px;
   border-radius: 10px;
   list-style: none;
@@ -113,6 +113,64 @@ body * {
   font-size: 1.5rem;
   font-weight: 700;
   color: #00ADB5;
+}
+
+.main-section {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.graph-area {
+  width: 512px;
+}
+
+.total-time-display {
+  margin: 0px 0 20px 20px;
+  width: 492px;
+  height: 320px;
+  border-radius: 10px;
+  background-color: #00ADB5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.total-time-display h4 {
+  color: #FFF;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.total-time-display img {
+  width: 80px;
+  height: 80px;
+}
+.total-time-display #total-time-value {
+  color: #FFF;
+  font-size: 2.25rem;
+}
+
+.progress-bar {
+  position: relative;
+  width: 492px;
+  margin-left: 20px;
+  height: 20px;
+}
+.progress-bar .bar-base {
+  width: 100%;
+  height: 100%;
+  background-color: #393E46;
+  border-radius: 20px;
+}
+.progress-bar .bar-base .bar-progress {
+  height: inherit;
+  border-radius: inherit;
+  width: 25%;
+  background-color: #00ADB5;
 }
 
 /*# sourceMappingURL=style.css.map */
