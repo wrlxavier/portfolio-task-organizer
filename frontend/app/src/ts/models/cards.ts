@@ -20,5 +20,23 @@ export class Cards {
         });
     }
 
+    public totalTime() : number {
+        let totalTime = 0;
+        this.cards.forEach((card) => {
+            totalTime += card.cardTime;
+        });
+        return totalTime;
+    }
+
+    public totalTimeOfTaskCompleted() : number {
+        let totalTime = 0;
+        this.cards.forEach((card) => {
+            if(card.taskCompleted){
+                totalTime += card.cardTime;
+            }
+        });
+        return totalTime;
+    }
+
 
 }

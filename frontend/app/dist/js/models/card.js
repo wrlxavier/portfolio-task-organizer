@@ -1,15 +1,11 @@
 export class Card {
-    constructor(textContent, deadline) {
+    constructor(textContent, timeInMinutes) {
         this.textContent = textContent;
-        if (deadline) {
-            this.deadline = deadline;
-        }
+        this.timeInMinutes = timeInMinutes;
+        this.isChecked = false;
     }
     get content() {
         return this.textContent;
-    }
-    get deadlineTask() {
-        return this.deadline;
     }
     get associatedList() {
         return this.associatedListName;
@@ -17,17 +13,23 @@ export class Card {
     get cardPosition() {
         return this.positionInTheList;
     }
+    get cardTime() {
+        return this.timeInMinutes;
+    }
+    get taskCompleted() {
+        return this.isChecked;
+    }
     set content(textContent) {
         this.textContent = textContent;
-    }
-    set deadlineTask(deadline) {
-        this.deadline = deadline;
     }
     set associatedList(listName) {
         this.associatedListName = listName;
     }
     set cardPosition(position) {
         this.positionInTheList = position;
+    }
+    set taskCompleted(checkState) {
+        this.isChecked = checkState;
     }
 }
 //# sourceMappingURL=card.js.map

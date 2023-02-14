@@ -13,5 +13,21 @@ export class Cards {
             console.log(card.content);
         });
     }
+    totalTime() {
+        let totalTime = 0;
+        this.cards.forEach((card) => {
+            totalTime += card.cardTime;
+        });
+        return totalTime;
+    }
+    totalTimeOfTaskCompleted() {
+        let totalTime = 0;
+        this.cards.forEach((card) => {
+            if (card.taskCompleted) {
+                totalTime += card.cardTime;
+            }
+        });
+        return totalTime;
+    }
 }
 //# sourceMappingURL=cards.js.map

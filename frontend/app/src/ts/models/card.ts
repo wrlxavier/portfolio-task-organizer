@@ -1,24 +1,19 @@
 export class Card {
     private textContent: string;
-    private deadline: Date;
+    private timeInMinutes: number;
     private associatedListName: string;
     private positionInTheList: number;
+    private isChecked: boolean;
 
 
-    constructor(textContent: string, deadline?: Date){
+    constructor(textContent: string, timeInMinutes: number){
         this.textContent = textContent;
-        if (deadline){
-            this.deadline = deadline;
-        }
+        this.timeInMinutes = timeInMinutes;
+        this.isChecked = false;
     }
 
     public get content() : string {
         return this.textContent;
-    }
-
-    
-    public get deadlineTask() : Date {
-        return this.deadline;
     }
 
     public get associatedList() : string {
@@ -29,12 +24,16 @@ export class Card {
         return this.positionInTheList;
     }
 
-    public set content(textContent: string) {
-        this.textContent = textContent;
+    public get cardTime() : number {
+        return this.timeInMinutes;
     }
 
-    public set deadlineTask(deadline: Date) {
-        this.deadline = deadline;
+    public get taskCompleted() : boolean {
+        return this.isChecked;
+    }
+
+    public set content(textContent: string) {
+        this.textContent = textContent;
     }
 
     public set associatedList(listName: string) {
@@ -43,6 +42,10 @@ export class Card {
 
     public set cardPosition(position: number) {
         this.positionInTheList = position;
+    }
+
+    public set taskCompleted(checkState: boolean) {
+        this.isChecked = checkState;
     }
     
 }
